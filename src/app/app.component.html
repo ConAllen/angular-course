@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-12">
       <app-cockpit
@@ -6,10 +6,20 @@
       (blueprintCreated)="onBlueprintAdded($event)"
       ></app-cockpit>
       <hr>
+      <button class="btn btn-primary" (click)="onChangeFirst()" > Change first</button>
+      <button class="btn btn-danger ml-2" (click)="onDestroyFirst()" > Delete first</button>
+
       <app-server-element
-        [element]="serverElement"
-        *ngFor = "let serverElement of serverElements; let i"
-        ></app-server-element>
+      *ngFor = "let serverElement of serverElements;"
+      [element]="serverElement"
+      [name] = "serverElement.name"
+      >
+        <p>
+          <strong *ngIf=" serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
+          <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
+        </p>
+      </app-server-element>
     </div>
   </div>
-  </div>
+  </div> -->
+<app-directives></app-directives>
