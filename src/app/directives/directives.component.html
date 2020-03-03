@@ -33,6 +33,8 @@
       </ul>
       <ng-template [ngIf]="onlyOdd">
         <p appBasicHighlight >Only odd</p>
+      <p [appBetterHighlight]="'red'" [defaultColor]="'yellow'" >this is a better highlight</p>
+
       </ng-template>
     </div>
   </div>
